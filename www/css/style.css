@@ -3,3 +3,11 @@
 .tadpole-tab-background {
   background-color: rgba(0,0,0,.618) !important;
 }
+
+.tadpole-searchbar-background {
+  background-color: #f15353 !important;
+}
+
+.tadpole-noborder {
+  border-width: 0px !important;
+}

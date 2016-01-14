@@ -1,17 +1,46 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
-    </p>
+<ion-view>
+
+  <ion-nav-title>
+    <div class="item item-input-inset tadpole-searchbar-background">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="商户名称" ng-model="contact.searchingKeyword" ng-change="filterChatsByType()">
+      </label>
+    </div>
+  </ion-nav-title>
+
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-buttons side="left" class="button button-clear">
+
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000">
+      <ion-slide ng-repeat="ad in ads" ui-sref="{{ad}}">
+        <img class="slide-zoom" ng-src="{{ad}}">
+      </ion-slide>
+    </ion-slide-box>
+
+    <!--collection-item-height="itemHeight"-->
+    <ion-item collection-repeat="category in categories" class="tadpole-noborder" collection-item-width="'20%'" style="text-align: center">
+      <a class="button button-clear" ng-href="#/searchreport/{{type.id}}">
+        <i class="{{category.icon}} {{category.color}}"></i>
+      </a>
+      <br>
+      {{category.name}}
+
+    </ion-item>
+
+    <ion-item collection-repeat="product in highlightProducts" collection-item-width="'50%'" style="text-align: center">
+      <a class="button button-clear" ng-href="#/searchreport/{{type.id}}">
+        <i class="{{product.icon}} {{product.color}}"></i>
+      </a>
+      <br>
+      {{product.name}}
+
+    </ion-item>
+
   </ion-content>
 </ion-view>
