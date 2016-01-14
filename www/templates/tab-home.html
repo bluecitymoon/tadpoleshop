@@ -1,10 +1,10 @@
-<ion-view>
+<ion-view title="商城">
 
   <ion-nav-title>
     <div class="item item-input-inset tadpole-searchbar-background">
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="商户名称" ng-model="contact.searchingKeyword" ng-change="filterChatsByType()">
+        <input type="text" placeholder="商品名称" ng-model="contact.searchingKeyword" ng-click="goSeachIndexPage()">
       </label>
     </div>
   </ion-nav-title>
@@ -33,14 +33,14 @@
 
     </ion-item>
 
-    <ion-item collection-repeat="product in highlightProducts" collection-item-width="'50%'" style="text-align: center">
-      <a class="button button-clear" ng-href="#/searchreport/{{type.id}}">
-        <i class="{{product.icon}} {{product.color}}"></i>
-      </a>
-      <br>
-      {{product.name}}
+    <!--<ion-item collection-repeat="product in highlightProducts" collection-item-width="'50%'" style="text-align: center">-->
+      <!--<a class="button button-clear">-->
+        <!--<i class="{{product.pic}} {{product.c}}"></i>-->
+      <!--</a>-->
+      <!--<br>-->
+      <!--{{product.productName}}-->
 
-    </ion-item>
+    <!--</ion-item>-->
 
   </ion-content>
 </ion-view>

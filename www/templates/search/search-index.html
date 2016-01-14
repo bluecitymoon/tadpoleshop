@@ -1,0 +1,40 @@
+<ion-view hide-nav-bar="true">
+
+  <ion-content>
+    <div class="item item-input-inset tadpole-searchbar-background">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="商品名称" ng-model="contact.searchingKeyword" autofocus>
+      </label>
+    </div>
+
+    <div class="item item-divider">
+      <i class="ion ion-ios-flame-outline assertive"></i> 热门搜索
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="keyword in hotKeywords">
+
+        <p>{{keyword.name}}</p>
+
+      </ion-list>
+
+    <div class="item item-divider">
+      <i class="ion ion-ios-clock-outline balanced"></i> 历史记录
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="keyword in keywordHistoryList" href="#/tab/chats/{{chat.id}}">
+
+        <p>{{keyword.name}}</p>
+
+    </ion-list>
+
+    <div class="padding" ng-show="keywordHistoryList.length > 0">
+      <button class="button button-block button-assertive" ng-click="clearSearchHistory()">
+        清除历史记录
+
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
