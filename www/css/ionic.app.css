@@ -4681,6 +4681,10 @@ a.subdued {
   background-color: #444;
   background-image: none; }
 
+.tabs-striped.tabs-background-tadpole .tabs {
+  background-color: rgba(0, 0, 0, 0.618);
+  background-image: none; }
+
 .tabs-striped.tabs-color-light .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
@@ -6247,8 +6251,8 @@ button.item.item-button-right {
 .item-avatar .item-content,
 .item-avatar-left,
 .item-avatar-left .item-content {
-  padding-left: 72px;
-  min-height: 72px; }
+  padding-left: 132px;
+  min-height: 132px; }
   .item-avatar > img:first-child,
   .item-avatar .item-image,
   .item-avatar .item-content > img:first-child,
@@ -6260,16 +6264,16 @@ button.item.item-button-right {
     position: absolute;
     top: 16px;
     left: 16px;
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 100px;
+    max-height: 100px;
     width: 100%;
     height: 100%;
-    border-radius: 50%; }
+    border-radius: 2px; }
 
 .item-avatar-right,
 .item-avatar-right .item-content {
-  padding-right: 72px;
-  min-height: 72px; }
+  padding-right: 132px;
+  min-height: 132px; }
   .item-avatar-right > img:first-child,
   .item-avatar-right .item-image,
   .item-avatar-right .item-content > img:first-child,
@@ -6277,11 +6281,11 @@ button.item.item-button-right {
     position: absolute;
     top: 16px;
     right: 16px;
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 100px;
+    max-height: 100px;
     width: 100%;
     height: 100%;
-    border-radius: 50%; }
+    border-radius: 2px; }
 
 .item-thumbnail-left,
 .item-thumbnail-left .item-content {

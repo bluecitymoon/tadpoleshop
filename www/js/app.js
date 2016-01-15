@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.searchcontrollers', 'tadpoleshop.product-list-controllers', 'tadpoleshop.services'])
+angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.searchcontrollers', 'tadpoleshop.product-list-controllers', 'tadpoleshop.single-product-controllers', 'tadpoleshop.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -61,6 +61,13 @@ angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.
         url: '/product-list/:keyword',
         templateUrl: 'templates/product/product-list.html',
         controller: 'ProductListCtrl'
+
+      })
+
+      .state('product-detail', {
+        url: '/product-detail/:id',
+        templateUrl: 'templates/product/product-detail.html',
+        controller: 'SingleProductCtrl'
 
       })
 

@@ -56,3 +56,6 @@
   background-color: #FAFAFA;
 }
 
+.strike {
+  text-decoration: line-through;
+}

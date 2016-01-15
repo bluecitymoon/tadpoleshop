@@ -1,0 +1,13 @@
+<ion-view view-title="商品详情" hide-nav-bar="true">
+  <ion-content>
+
+  </ion-content>
+  <ion-footer-bar class="bar bar-clear product-details" id="products-detail-footer">
+    <button class="button button-block button-positive" ng-hide="product.addedToCart"
+            ng-click="product.addToCart(product.product)">{{::product.messages.add_to_cart}}
+    </button>
+    <button class="button button-block button-balanced" ng-show="product.addedToCart"><i
+      class="icon ion-checkmark-round"></i>{{::product.messages.added_to_cart}}
+    </button>
+  </ion-footer-bar>
+</ion-view>

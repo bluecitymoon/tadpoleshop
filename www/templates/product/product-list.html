@@ -9,16 +9,23 @@
     </div>
 
     <ion-list>
-      <ion-item class="item-avatar item-text-wrap" ng-repeat="product in allProducts | orderBy: 'name'">
+      <ion-item class="item-avatar item-text-wrap" ng-repeat="product in allProducts | orderBy: 'name'"
+                ng-href="#/product-detail/{{product.name}}">
 
         <img ng-src="{{product.picture}}">
 
         <h3>{{product.name}}</h3>
 
         <div class="row">
-          <div class="col col-33"><p>{{product.shippingType}}</p></div>
-          <div class="col col-33"><p>{{product.dealCount}}人付款</p></div>
-          <div class="col col-34"><p>{{product.city}}</p></div>
+          <h2 class="assertive">¥{{product.price}}</h2>
+
+          <p class="col-offset-10 strike">¥{{product.originalPrice}}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-25"><p>{{product.shippingType}}</p></div>
+          <div class="col-50 text-center"><p>{{product.dealCount}}成交</p></div>
+          <div class="col-25 text-right"><p>{{product.city}}</p></div>
         </div>
 
       </ion-item>

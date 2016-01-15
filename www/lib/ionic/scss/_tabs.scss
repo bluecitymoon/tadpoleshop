@@ -231,6 +231,7 @@
   @include tabs-striped-background('tabs-background-energized',$energized);
   @include tabs-striped-background('tabs-background-royal', $royal);
   @include tabs-striped-background('tabs-background-dark', $dark);
+  @include tabs-striped-background('tabs-background-tadpole', $tadpole-tab-background);
 
   @include tabs-striped-color('tabs-color-light', $light);
   @include tabs-striped-color('tabs-color-stable', $stable);

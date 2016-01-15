@@ -15,6 +15,7 @@ angular.module('tadpoleshop.product-list-controllers', [])
 
     $scope.searchProductsWithKeyword = function() {
 
+
     };
 
   });
