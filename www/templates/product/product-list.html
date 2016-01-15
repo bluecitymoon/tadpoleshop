@@ -1,0 +1,27 @@
+<ion-view view-title="商品列表" hide-nav-bar="true">
+  <ion-content>
+
+    <div class="item item-input-inset tadpole-searchbar-background">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="商品名称" ng-model="search.keyword" autofocus>
+      </label>
+    </div>
+
+    <ion-list>
+      <ion-item class="item-avatar item-text-wrap" ng-repeat="product in allProducts | orderBy: 'name'">
+
+        <img ng-src="{{product.picture}}">
+
+        <h3>{{product.name}}</h3>
+
+        <div class="row">
+          <div class="col col-33"><p>{{product.shippingType}}</p></div>
+          <div class="col col-33"><p>{{product.dealCount}}人付款</p></div>
+          <div class="col col-34"><p>{{product.city}}</p></div>
+        </div>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

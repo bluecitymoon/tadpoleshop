@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.searchcontrollers', 'tadpoleshop.services'])
+angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.searchcontrollers', 'tadpoleshop.product-list-controllers', 'tadpoleshop.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -55,6 +55,12 @@ angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.
         templateUrl: 'templates/search/search-index.html',
         controller: 'SearchProductCtrl'
 
+      })
+
+      .state('product-list', {
+        url: '/product-list/:keyword',
+        templateUrl: 'templates/product/product-list.html',
+        controller: 'ProductListCtrl'
 
       })
 
@@ -67,6 +73,7 @@ angular.module('tadpoleshop', ['ionic', 'tadpoleshop.controllers', 'tadpoleshop.
           }
         }
       })
+
       .state('tab.chat-detail', {
         url: '/chats/:chatId',
         views: {

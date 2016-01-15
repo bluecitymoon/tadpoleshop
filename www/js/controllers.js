@@ -18,12 +18,16 @@ angular.module('tadpoleshop.controllers', [])
     ];
 
     $scope.highlightProducts = [
-      {productName : 'Nike', pic: 'ion-log-in', c: 'balanced'}
+      {productName : 'Nike', pic: 'http://gw3.alicdn.com/bao/uploaded/i2/TB1DFu2LXXXXXXDaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg', c: 'balanced'},
+      {productName : 'Nike', pic: 'http://gw3.alicdn.com/bao/uploaded/i2/TB1DFu2LXXXXXXDaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg', c: 'balanced'},
+      {productName : 'Nike', pic: 'http://gw3.alicdn.com/bao/uploaded/i2/TB1DFu2LXXXXXXDaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg', c: 'balanced'},
+      {productName : 'Nike', pic: 'http://gw3.alicdn.com/bao/uploaded/i2/TB1DFu2LXXXXXXDaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg', c: 'balanced'},
+      {productName : 'Nike', pic: 'http://gw3.alicdn.com/bao/uploaded/i2/TB1DFu2LXXXXXXDaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg', c: 'balanced'}
     ];
 
     $scope.goSeachIndexPage = function() {
       $state.go('search-product');
-    }
+    };
   })
 
 .controller('ChatsCtrl', function($scope, Chats) {

@@ -1,6 +1,7 @@
 <ion-view hide-nav-bar="true">
 
   <ion-content>
+
     <div class="item item-input-inset tadpole-searchbar-background">
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
@@ -9,22 +10,22 @@
     </div>
 
     <div class="item item-divider">
+      <i class="ion ion-ios-clock-outline balanced"></i> 历史记录
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="keyword in keywordHistoryList" ng-click="gotoProductsPage(keyword.name)">
+
+        <p>{{keyword.name}}</p>
+
+    </ion-list>
+
+    <div class="item item-divider">
       <i class="ion ion-ios-flame-outline assertive"></i> 热门搜索
     </div>
 
     <ion-list>
       <ion-item ng-repeat="keyword in hotKeywords">
-
-        <p>{{keyword.name}}</p>
-
-      </ion-list>
-
-    <div class="item item-divider">
-      <i class="ion ion-ios-clock-outline balanced"></i> 历史记录
-    </div>
-
-    <ion-list>
-      <ion-item ng-repeat="keyword in keywordHistoryList" href="#/tab/chats/{{chat.id}}">
 
         <p>{{keyword.name}}</p>
 
@@ -36,5 +37,7 @@
 
       </button>
     </div>
+
   </ion-content>
+
 </ion-view>

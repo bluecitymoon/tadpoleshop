@@ -33,7 +33,24 @@
 
     </ion-item>
 
-    <!--<ion-item collection-repeat="product in highlightProducts" collection-item-width="'50%'" style="text-align: center">-->
+    <div class="row row-wrap">
+      <div class="col col-50" ng-repeat="product in highlightProducts">
+        <div class="card card-facebook margin-0">
+          <div class="item item-avatar-center">
+            <img ng-src="{{ product.pic }}"/>
+
+            <h2>{{ product.productName }}</h2>
+
+            <p>{{ product.c }}</p>
+          </div>
+          <div class="item item-divider">
+            {{ item.people }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!--<ion-item collection-repeat="product in highlightProducts" collection-item-width="'50%'" style="text-align: center">-->
       <!--<a class="button button-clear">-->
         <!--<i class="{{product.pic}} {{product.c}}"></i>-->
       <!--</a>-->
